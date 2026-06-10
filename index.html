@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -16,6 +17,7 @@
         body{
             background:#111827;
             color:white;
+            min-height:100vh;
         }
 
         header{
@@ -26,71 +28,68 @@
         }
 
         header h1{
-            font-size:3rem;
+            font-size:2.5rem;
         }
 
         header p{
-            color:#9ca3af;
             margin-top:10px;
-        }
-
-        .hero{
-            text-align:center;
-            padding:80px 20px;
-        }
-
-        .hero h2{
-            font-size:2.5rem;
-            margin-bottom:15px;
-        }
-
-        .hero p{
-            color:#d1d5db;
-            max-width:700px;
-            margin:auto;
+            color:#9ca3af;
         }
 
         .container{
-            width:90%;
-            max-width:1200px;
-            margin:auto;
+            max-width:1000px;
+            margin:40px auto;
+            padding:0 20px;
         }
 
-        .cards{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:20px;
-            margin-bottom:50px;
-        }
-
-        .card{
+        .menu{
             background:#1f2937;
-            padding:25px;
             border-radius:12px;
-            transition:.3s;
-            text-decoration:none;
+            padding:25px;
+        }
+
+        .menu h2{
+            margin-bottom:20px;
+            color:#60a5fa;
+        }
+
+        .menu ul{
+            list-style:none;
+        }
+
+        .menu li{
+            margin:8px 0;
+        }
+
+        .menu a{
             color:white;
+            text-decoration:none;
+            transition:.2s;
         }
 
-        .card:hover{
-            transform:translateY(-5px);
-            border:1px solid #3b82f6;
+        .menu a:hover{
+            color:#60a5fa;
         }
 
-        .card h3{
-            margin-bottom:10px;
+        .submenu{
+            margin-left:30px;
+            margin-top:5px;
+            border-left:2px solid #374151;
+            padding-left:15px;
         }
 
-        .card p{
-            color:#9ca3af;
+        .category{
+            font-weight:bold;
+            font-size:1.1rem;
+            margin-top:15px;
         }
 
         footer{
             text-align:center;
-            padding:25px;
+            padding:20px;
+            margin-top:40px;
             background:#1f2937;
             color:#9ca3af;
-            margin-top:50px;
         }
     </style>
 </head>
@@ -98,55 +97,60 @@
 
 <header>
     <h1>TWMMO Wiki</h1>
-    <p>TWMMO RPG Minecraft 伺服器官方資料庫</p>
+    <p>Minecraft RPG 伺服器資料庫</p>
 </header>
 
-<section class="hero">
-    <h2>歡迎來到 TWMMO Wiki</h2>
-    <p>
-        查詢所有副本、Boss、怪物、素材、裝備與遊戲資訊。
-    </p>
-</section>
-
 <div class="container">
-    <div class="cards">
+    <div class="menu">
 
-        <a href="副本資料.html" class="card">
-            <h3>🏰 副本資料</h3>
-            <p>查看所有副本介紹、Boss與攻略。</p>
-        </a>
+        <h2>📚 目錄</h2>
 
-        <a href="monsters.html" class="card">
-            <h3>👹 怪物圖鑑</h3>
-            <p>查詢怪物屬性與掉落物。</p>
-        </a>
+        <ul>
 
-        <a href="materials.html" class="card">
-            <h3>📦 素材圖鑑</h3>
-            <p>查看素材來源與用途。</p>
-        </a>
+            <li class="category">
+                <a href="index.html">🏠 主頁</a>
+            </li>
 
-        <a href="bosses.html" class="card">
-            <h3>⚔️ Boss圖鑑</h3>
-            <p>了解Boss技能與掉落。</p>
-        </a>
+            <li class="category">
+                <a href="dungeons.html">🏰 副本目錄</a>
 
-        <a href="equipment.html" class="card">
-            <h3>🛡️ 裝備資料</h3>
-            <p>查詢裝備能力與製作方式。</p>
-        </a>
+                <ul class="submenu">
+                    <li><a href="dungeons/dungeonA.html">副本A</a></li>
+                    <li><a href="dungeons/dungeonB.html">副本B</a></li>
+                    <li><a href="dungeons/dungeonC.html">副本C</a></li>
+                </ul>
+            </li>
 
-        <a href="updates.html" class="card">
-            <h3>📜 更新紀錄</h3>
-            <p>查看版本更新內容。</p>
-        </a>
+            <li class="category">
+                <a href="monsters.html">👹 怪物目錄</a>
+
+                <ul class="submenu">
+                    <li><a href="monsters/monsterA.html">怪物A</a></li>
+                    <li><a href="monsters/monsterB.html">怪物B</a></li>
+                </ul>
+            </li>
+
+            <li class="category">
+                <a href="equipment.html">⚔️ 裝備目錄</a>
+
+                <ul class="submenu">
+                    <li><a href="equipment/equipmentA.html">裝備A</a></li>
+                </ul>
+            </li>
+
+            <li class="category">
+                <a href="materials.html">📦 素材目錄</a>
+            </li>
+
+        </ul>
 
     </div>
 </div>
 
 <footer>
-    © 2026 TWMMO Wiki | Minecraft RPG Server
+    © 2026 TWMMO Wiki
 </footer>
 
 </body>
 </html>
+```
